@@ -1,13 +1,14 @@
-import { FC } from 'react'
+import { FC } from "react";
 
-interface BlogProps {
-  
-}
+interface BlogProps {}
 
 const Blog: FC<BlogProps> = ({}) => {
-  return <div>Blog
-    <div> updated app1</div>
-  </div>
-}
+  return (
+    <div>
+      Blog
+      <div>another update for app1</div>
+    </div>
+  );
+};
 
-export default Blog
+export default Blog;

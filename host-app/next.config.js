@@ -22,9 +22,7 @@ const nextConfig = {
             isServer ? "ssr" : "chunks"
           }/remoteEntry.js`,
         },
-        shared: {
-          // whatever else
-        },
+        shared: ["react", "react-dom", "next"]
       })
     );
     if (!isServer) {

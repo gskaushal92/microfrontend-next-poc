@@ -1,14 +1,15 @@
+import React, {Suspense} from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import dynamic from "next/dynamic";
 
-const Blog = dynamic(() => import("app1/Blog"), {
-  ssr: true,
-});
+// const Blog = dynamic(() => import("app1/Blog"), {
+//   ssr: true,
+// });
 
-const inter = Inter({ subsets: ["latin"] });
+// const Blog = dynamic(() => import("app1/Blog"), { ssr: true });
+const Blog = React.lazy(() => import("app1/Blog"));
 
 export default function Home() {
   return (
@@ -21,7 +22,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>Host App</h1>
-        <Blog />
+        {/* <Blog /> */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Blog />
+        </Suspense>
       </main>
     </>
   );

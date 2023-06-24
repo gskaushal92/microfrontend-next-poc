@@ -18,11 +18,11 @@ const nextConfig = {
         name: "container",
         filename: "static/chunks/remoteEntry.js",
         remotes: {
-          app1: `app1@http://localhost:3001/_next/static/${
+          app1: `app1@https://microfrontend-next-poc-app1.vercel.app/_next/static/${
             isServer ? "ssr" : "chunks"
           }/remoteEntry.js`,
         },
-        shared: ["react", "react-dom", "next"]
+        shared: ["react", "react-dom", "next"],
       })
     );
     if (!isServer) {

@@ -11,9 +11,7 @@ const nextConfig = {
         exposes: {
           "./Blog": "./src/components/Blog",
         },
-        shared: {
-          // whatever else
-        },
+        shared: ["react", "react-dom", "next"],
         extraOptions: {
           automaticAsyncBoundary: true,
         },

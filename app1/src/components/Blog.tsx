@@ -7,6 +7,7 @@ const Blog: FC<BlogProps> = ({}) => {
     <div>
       Blog
       <div>testing update</div>
+      <div>update check with react lazy</div>
     </div>
   );
 };

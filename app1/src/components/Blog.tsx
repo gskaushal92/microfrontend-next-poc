@@ -8,6 +8,7 @@ const Blog: FC<BlogProps> = ({}) => {
       Blog
       <div>testing update</div>
       <p> different browser check with markup update</p>
+      <div> same browser check with markup update</div>
     </div>
   );
 };

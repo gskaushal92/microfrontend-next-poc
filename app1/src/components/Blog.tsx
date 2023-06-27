@@ -8,6 +8,7 @@ const Blog: FC<BlogProps> = ({}) => {
       Blog
       <div>testing update</div>
       <p> Deployment with markup update</p>
+      <p> deploying only app1</p>
     </div>
   );
 };

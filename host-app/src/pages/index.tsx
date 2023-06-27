@@ -8,8 +8,8 @@ import dynamic from "next/dynamic";
 //   ssr: true,
 // });
 
-// const Blog = dynamic(() => import("app1/Blog"), { ssr: true });
-const Blog = React.lazy(() => import("app1/Blog"));
+const Blog = dynamic(() => import("app1/Blog"));
+// const Blog = React.lazy(() => import("app1/Blog"));
 
 export default function Home() {
   return (
@@ -22,10 +22,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>Host App</h1>
-        {/* <Blog /> */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Blog />
+        {/* <Suspense fallback={<div>Loading...</div>}>
           <Blog />
-        </Suspense>
+        </Suspense> */}
       </main>
     </>
   );
